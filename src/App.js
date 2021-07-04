@@ -7,6 +7,11 @@ import {
   Figure,
   Breadcrumb,
   Carousel,
+  ListGroup,
+  Jumbotron,
+  Button,
+  Form,
+  Image
 } from "react-bootstrap";
 
 class App extends Component {
@@ -89,6 +94,50 @@ class App extends Component {
           </Col>
         </Row>
 
+        <br />
+        <Row>
+          <Col md={4}>
+            <ListGroup as="ul">
+              <ListGroup.Item as="li" active>
+                Liga 1 Indonesia
+              </ListGroup.Item>
+              <ListGroup.Item as="li">Liga Premier Inggris</ListGroup.Item>
+              <ListGroup.Item as="li">Devisi Utama</ListGroup.Item>
+              <ListGroup.Item as="li">Serie A</ListGroup.Item>
+              <ListGroup.Item as="li">Ligue 1</ListGroup.Item>
+              <ListGroup.Item as="li">Bundes Liga</ListGroup.Item>
+            </ListGroup>
+          </Col>
+
+          <Col md={4}>
+            <Jumbotron>
+              <h1>Devisi Primera</h1>
+              <p>Main Untuk Catalunya, Gerald Pique Minta Dihormati</p>
+              <Button variant="primary">Read More</Button>
+            </Jumbotron>
+          </Col>
+
+          <Col>
+            <Form>
+              <Form.Group className="text-center">
+              <Image src="https://png.pngtree.com/svg/20161113/ef1b24279e.png" width={50} height={50} rounded />
+               <h4>Silahkan Login</h4>
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Control type="email" placeholder="Masukan email" />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Control type="password" placeholder="Password" />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Check type="checkbox" label="Term and Condition" />
+              </Form.Group>
+              <Button variant="primary" type="submit">
+                Login
+              </Button>
+            </Form>
+          </Col>
+        </Row>
       </div>
     );
   }
